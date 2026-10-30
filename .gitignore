@@ -1,0 +1,11 @@
+﻿.vs/
+**/.vs/
+**/x64/
+**/Debug/
+**/Release/
+*.user
+*.suo
+*.obj
+*.pdb
+*.ilk
+*.tlog
