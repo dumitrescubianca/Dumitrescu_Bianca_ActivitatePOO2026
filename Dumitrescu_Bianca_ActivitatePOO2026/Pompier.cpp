@@ -73,7 +73,6 @@ public:
         delete[] this->durate;
     }
 
-    // EXERCITIUL 4 - Operatorul de afisare
     friend ostream& operator<<(ostream& out, const Pompier& p) {
         out << endl << "ID Pompier: " << p.idPompier;
 
