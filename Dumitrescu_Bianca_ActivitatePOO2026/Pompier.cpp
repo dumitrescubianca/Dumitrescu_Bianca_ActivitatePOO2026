@@ -73,6 +73,27 @@ public:
         delete[] this->durate;
     }
 
+
+    void operator+=(const Pompier& p) {
+        int nrNou = this->nrInterventii + p.nrInterventii;
+
+        float* durateNoi = new float[nrNou];
+
+        for (int i = 0; i < this->nrInterventii; i++) {
+            durateNoi[i] = this->durate[i];
+        }
+
+        for (int i = 0; i < p.nrInterventii; i++) {
+            durateNoi[this->nrInterventii + i] = p.durate[i];
+        }
+
+        delete[] this->durate;
+
+        this->durate = durateNoi;
+        this->nrInterventii = nrNou;
+    }
+
+
     friend ostream& operator<<(ostream& out, const Pompier& p) {
         out << endl << "ID Pompier: " << p.idPompier;
 
@@ -139,6 +160,12 @@ int main() {
 
     cout << endl << "Afisare pompier p5:";
     cout << p5;
+
+
+    p1 += p4;
+
+    cout << endl << "Dupa agregare:";
+    cout << p1;
 
     return 0;
 }
