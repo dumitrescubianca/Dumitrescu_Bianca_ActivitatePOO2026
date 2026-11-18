@@ -27,5 +27,8 @@
     <ClCompile Include="Elev.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Calatorie.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
