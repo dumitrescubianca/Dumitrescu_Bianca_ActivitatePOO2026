@@ -33,6 +33,16 @@ public:
 			this->numeDestinatie = destinatieNoua;
 		}
 	}
+
+
+	Calatorie& operator=(const Calatorie& copie) {
+		if (this != &copie) {
+			this->setNumeDestinatie(copie.numeDestinatie);
+		}
+
+		return *this;
+	}
+
 };
 
 int main()
@@ -42,6 +52,9 @@ int main()
 	 c1.setNumeDestinatie("Romania");
 	 cout << "Destinatia a fost modificata cu succes!!" << endl;
 	 cout << "ID Calatorie:" << c1.getIdCalatorie() << endl;
+	 Calatorie c2("Italia");
+	 c1 = c2;
+	 cout << "Operatorul = a fost apelat!" << endl;
 
 	return 0;
 }
