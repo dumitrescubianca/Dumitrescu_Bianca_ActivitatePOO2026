@@ -30,5 +30,8 @@
     <ClCompile Include="Calatorie.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="bradCraciun.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
