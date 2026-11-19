@@ -29,6 +29,12 @@ public:
 			this->numeBrad = denumireNoua;
 		}
 	}
+	bradCraciun&operator = (const bradCraciun & b){
+		if (this != &b) {
+			this->setNumeBrad(b.numeBrad);
+		}
+		return *this;
+	}
 };
 
 int main()
@@ -38,7 +44,10 @@ int main()
 	cout << "ID Brad:" << b1.getIdBrad() << endl;
 
 	b1.setNumeBrad("Brad rosu");
-
 	cout << "Denumirea bradului a fost modificat cu succes!" << endl;
+
+	bradCraciun b2("Brad cu globuri");
+	b1 = b2;
+	cout << "Operatorul = a fost aplicat." << endl;
 	return 0;
 }
