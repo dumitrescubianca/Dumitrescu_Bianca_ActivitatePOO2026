@@ -35,6 +35,10 @@ public:
 		}
 		return *this;
 	}
+	
+	bool operator<(const bradCraciun& b) {
+		return strlen(this->numeBrad) < strlen(b.numeBrad);
+	}
 };
 
 int main()
@@ -49,5 +53,15 @@ int main()
 	bradCraciun b2("Brad cu globuri");
 	b1 = b2;
 	cout << "Operatorul = a fost aplicat." << endl;
+
+	bradCraciun b3("Brad CLASIC");
+	bradCraciun b4("Brad cu luminite");
+
+	if (b3 < b4) {
+		cout << "Primul brad are numele mai scurt." << endl;
+	}
+	else {
+		cout << "Al doilea brad are numele mai scurt." << endl;
+	}
 	return 0;
 }
