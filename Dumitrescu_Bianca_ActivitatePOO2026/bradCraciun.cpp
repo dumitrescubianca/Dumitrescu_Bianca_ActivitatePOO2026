@@ -39,6 +39,12 @@ public:
 	bool operator<(const bradCraciun& b) {
 		return strlen(this->numeBrad) < strlen(b.numeBrad);
 	}
+
+	bradCraciun& operator+=(const  char* text){
+		if (text != nullptr) {
+
+		}
+	}
 };
 
 int main()

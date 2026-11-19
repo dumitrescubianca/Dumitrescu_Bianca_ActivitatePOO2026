@@ -33,5 +33,8 @@
     <ClCompile Include="bradCraciun.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="magazinCraciun.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
