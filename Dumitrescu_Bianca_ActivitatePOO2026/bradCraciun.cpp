@@ -20,6 +20,15 @@ public:
 	int getIdBrad() {
 		return this->idBrad;
 	}
+	void setNumeBrad(const char* numeNou) {
+		if (numeNou != nullptr) {
+			int dim = strlen(numeNou) + 1;
+			char* denumireNoua = new char[dim];
+			strcpy_s(denumireNoua, dim, numeNou);
+			delete[] this->numeBrad;
+			this->numeBrad = denumireNoua;
+		}
+	}
 };
 
 int main()
@@ -27,5 +36,9 @@ int main()
 	bradCraciun b1("Brad cu zapada");
 	cout << "Bradul a fost creat cu succes" << endl; 
 	cout << "ID Brad:" << b1.getIdBrad() << endl;
+
+	b1.setNumeBrad("Brad rosu");
+
+	cout << "Denumirea bradului a fost modificat cu succes!" << endl;
 	return 0;
 }
