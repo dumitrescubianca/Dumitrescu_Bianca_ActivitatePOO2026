@@ -39,6 +39,20 @@ public:
 	int getIdMagazin() const {
 		return this ->idMagazin;
 	}
+
+	void setPreturi(int valoriNoi, const float* vectorNou) {
+		if (valoriNoi > 0 && vectorNou != nullptr) {
+			float* copie = new float[valoriNoi];
+			for (int i = 0;i < valoriNoi;i++) {
+				copie[i] = vectorNou[i];
+			}
+	
+			delete[]this->preturi;
+			this->preturi = copie;
+			this->nrProduse = valoriNoi;
+		}
+	
+	}
 };
 
 int main() {
@@ -47,4 +61,10 @@ int main() {
 	magazinOnline m2(5, "magazin 1", 3, preturi);
 
 	cout << "Id magazin:" << m2.getIdMagazin() << endl;
+
+	float preturiNoi[] = { 55.4f,69.7f,27.8f };
+	m2.setPreturi(3, preturiNoi);
+	cout << "Inlocuirea vectorului fcauta cu succes" << endl;
+
+	return 0;
 }
